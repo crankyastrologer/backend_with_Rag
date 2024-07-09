@@ -7,3 +7,4 @@ langchain-community
 gunicorn
 psutil
 chromadb
+pysqlite3
