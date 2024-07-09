@@ -1,6 +1,9 @@
 from init import cross_origin,app,request,jsonify
 from RAG_chain import load,getResponse
 import time
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 rag_chain = load()
 @app.route('/api', methods=['POST','OPTIONS','GET'])
 @cross_origin()
